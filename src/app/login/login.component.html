@@ -1,0 +1,30 @@
+<app-header class="header"></app-header>
+<form #loginForm = "ngForm" (ngSubmit)="login(loginForm)">
+  <mat-card class="Card">
+    <mat-card-actions class="container">
+      <mat-card-title class="title">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Ikusi_logo.png" width="150">
+      </mat-card-title>
+      <mat-card-content>
+        <mat-form-field appearance="outline" class="usuario">
+          <mat-label>Usuario</mat-label>
+            <input matInput type="text" placeholder="Usuario" name="usuario" id="usuario" ngModel required>
+            <mat-icon matSuffix>account_circle</mat-icon>
+            
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" name="password" id="password" ngModel required>
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint>Olvidé mi contraseña</mat-hint>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-footer id="login-button">
+<!--         <button pButton type="button" label="Ingresar" class="ui-button-rounded ui-button-success" (click)="handleClick($event)"></button>
+ -->    
+ <button pButton type="submit" label="Ingresar" class="ui-button-rounded ui-button-success"></button>
+</mat-card-footer>
+    </mat-card-actions>
+  </mat-card>
+</form>  
+<app-footer></app-footer>

@@ -1,0 +1,42 @@
+.header{
+    background-image: linear-gradient(#0B7233, #FAFAFA);
+    height: 100px;
+    margin: 0 0 80px 0;
+}
+
+.powered{
+    font-size: 13px;
+}
+
+.social{
+ margin-left: auto;   
+}
+
+.social i{
+    margin: 0 12px 0 0;
+}
+
+#social-face{
+    color: #3268B1;
+}
+
+#social-twit{
+    color: #006EBE;
+}
+
+.language{
+    margin: 0 8px 0 0;
+}
+
+#language-icon{
+    color: gray;
+}
+
+.form{
+    font-size: 12px;
+    width: 100px;
+}
+
+.selector{
+    font-size: 12px;
+}

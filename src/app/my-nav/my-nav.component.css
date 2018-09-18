@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+
+}
+
+.sidenav {
+  width: 200px;
+  /* background-color: #ededed; */
+  background-image: linear-gradient(#ffffff,  #ededed, #ffffff);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  background-image: linear-gradient(#0B7233, #FAFAFA);
+  height: 100px;
+}
+
+.label-user{
+  font-size: 12px;
+  font-weight: lighter;
+  margin: 0 0 0 auto;
+}
+
+.label-user a{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #523c13;
+}
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}

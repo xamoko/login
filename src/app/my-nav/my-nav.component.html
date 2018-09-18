@@ -1,0 +1,55 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <app-multilevel></app-multilevel>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span> <img src="https://i1.wp.com/mexperiencia.com/wp-content/uploads/2017/03/ikusi.png?fit=164%2C217&ssl=1" alt="" width="115"> </span>
+      <span>IKUSI VELATIA</span>
+      <label for="" class="label-user"><a href="">Javier Morales</a></label>
+      <a href="#" (click)="logout()">
+       <i class="fas fa-sign-out-alt"></i>
+       </a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <!-- <app-login></app-login> -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">E-Mail</th>
+          <th scope="col">Street</th>
+          <th scope="col">City</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of Users">
+              <th scope="row">{{ user.id }}</th>
+              <th scope="row">{{ user.name }}</th>
+              <th scope="row">{{ user.username }}</th>
+              <th scope="row">{{ user.email }}</th>
+              <th scope="row">{{ user.address.street }}</th>
+              <th scope="row">{{ user.address.city }}</th>
+          </tr>
+      </tbody>
+  </table>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <app-footer></app-footer> -->
